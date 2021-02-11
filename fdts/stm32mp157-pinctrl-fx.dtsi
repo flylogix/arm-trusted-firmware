@@ -273,28 +273,51 @@
 
 			uart7_pins_a: uart7-0 {
 				pins1 {
-					pinmux = <STM32_PINMUX('A', 15, AF13)>; /* USART7_TX */
+					pinmux = <STM32_PINMUX('A', 15, AF13)>; /* UART7_TX */
 					bias-disable;
 					drive-push-pull;
 					slew-rate = <0>;
 				};
 				pins2 {
-					pinmux = <STM32_PINMUX('A', 8, AF13)>; /* USART7_RX */
+					pinmux = <STM32_PINMUX('A', 8, AF13)>; /* UART7_RX */
 					bias-disable;
 				};
 			};
 
-			usart3_pins_a: usart3-0 {
+			uart7_pins_b: uart7-1 {
 				pins1 {
-					pinmux = <STM32_PINMUX('B', 10, AF7)>, /* USART3_TX */
-						 <STM32_PINMUX('G', 8, AF8)>; /* USART3_RTS */
+					pinmux = <STM32_PINMUX('F', 7, AF7)>; /* UART7_TX */
 					bias-disable;
 					drive-push-pull;
 					slew-rate = <0>;
 				};
 				pins2 {
-					pinmux = <STM32_PINMUX('B', 12, AF8)>, /* USART3_RX */
-						 <STM32_PINMUX('I', 10, AF8)>; /* USART3_CTS_NSS */
+					pinmux = <STM32_PINMUX('F', 6, AF7)>; /* UART7_RX */
+					bias-disable;
+				};
+			};
+		
+			uart7_pins_c: uart7-2 {
+				pins1 {
+					pinmux = <STM32_PINMUX('A', 15, AF13)>; /* UART7_TX */
+					bias-disable;
+					drive-push-pull;
+					slew-rate = <0>;
+				};
+				pins2 {
+					pinmux = <STM32_PINMUX('A', 8, AF13)>; /* UART7_RX */
+					bias-disable;
+				};
+			};
+			usart3_pins_a: usart3-0 {
+				pins1 {
+					pinmux = <STM32_PINMUX('B', 10, AF7)>; /* USART3_TX */
+					bias-disable;
+					drive-push-pull;
+					slew-rate = <0>;
+				};
+				pins2 {
+					pinmux = <STM32_PINMUX('B', 12, AF8)>; /* USART3_RX */
 					bias-disable;
 				};
 			};
@@ -302,14 +325,14 @@
 			usart3_pins_b: usart3-1 {
 				pins1 {
 					pinmux = <STM32_PINMUX('C', 10, AF7)>, /* USART3_TX */
-						 <STM32_PINMUX('C', 12, AF7)>; /* USART3_RTS */
+						 <STM32_PINMUX('D', 12, AF7)>; /* USART3_RTS */
 					bias-disable;
 					drive-push-pull;
 					slew-rate = <0>;
 				};
 				pins2 {
 					pinmux = <STM32_PINMUX('D', 9, AF7)>, /* USART3_RX */
-						 <STM32_PINMUX('B', 13, AF7)>; /* USART3_CTS_NSS */
+						 <STM32_PINMUX('I', 10, AF8)>; /* USART3_CTS_NSS */
 					bias-disable;
 				};
 			};
