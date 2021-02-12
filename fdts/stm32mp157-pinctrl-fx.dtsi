@@ -134,15 +134,6 @@
 				st,bank-name = "GPIOK";
 				status = "disabled";
 			};
-
-			i2c4_pins_a: i2c4-0 {
-				pins {
-					pinmux = <STM32_PINMUX('B', 9, AF6)>; /* I2C4_SDA */
-					bias-disable;
-					drive-open-drain;
-					slew-rate = <0>;
-				};
-			};
 			
 			qspi_bk1_pins_a: qspi-bk1-0 {
 				pins1 {
@@ -366,9 +357,10 @@
 				status = "disabled";
 			};
 
-			i2c4_pins_z_a: i2c4-0 {
+			i2c4_pins_a: i2c4-0 {
 				pins {
-					pinmux = <STM32_PINMUX('Z', 4, AF6)>; /* I2C4_SCL */
+					pinmux = <STM32_PINMUX('Z', 4, AF6)>, /* I2C4_SCL */
+						 <STM32_PINMUX('B', 9, AF6)>; /* I2C4_SDA */
 					bias-disable;
 					drive-open-drain;
 					slew-rate = <0>;
