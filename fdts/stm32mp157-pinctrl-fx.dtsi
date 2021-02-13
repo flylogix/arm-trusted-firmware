@@ -135,6 +135,15 @@
 				status = "disabled";
 			};
 			
+			i2c4_pins_a: i2c4-0 {
+				pins {
+					pinmux = <STM32_PINMUX('B', 9, AF6)>; /* I2C4_SDA */
+					bias-disable;
+					drive-open-drain;
+					slew-rate = <0>;
+				};
+			};
+
 			sdmmc1_b4_pins_a: sdmmc1-b4-0 {
 				pins1 {
 					pinmux = <STM32_PINMUX('C', 8, AF12)>, /* SDMMC1_D0 */
@@ -166,45 +175,6 @@
 					bias-disable;
 				};
 			};
-
-			uart4_pins_b: uart4-1 {
-				pins1 {
-					pinmux = <STM32_PINMUX('D', 1, AF8)>; /* UART4_TX */
-					bias-disable;
-					drive-push-pull;
-					slew-rate = <0>;
-				};
-				pins2 {
-					pinmux = <STM32_PINMUX('B', 2, AF8)>; /* UART4_RX */
-					bias-disable;
-				};
-			};
-
-			uart7_pins_a: uart7-0 {
-				pins1 {
-					pinmux = <STM32_PINMUX('A', 15, AF13)>; /* UART7_TX */
-					bias-disable;
-					drive-push-pull;
-					slew-rate = <0>;
-				};
-				pins2 {
-					pinmux = <STM32_PINMUX('A', 8, AF13)>; /* UART7_RX */
-					bias-disable;
-				};
-			};
-
-			uart7_pins_b: uart7-1 {
-				pins1 {
-					pinmux = <STM32_PINMUX('F', 7, AF7)>; /* UART7_TX */
-					bias-disable;
-					drive-push-pull;
-					slew-rate = <0>;
-				};
-				pins2 {
-					pinmux = <STM32_PINMUX('F', 6, AF7)>; /* UART7_RX */
-					bias-disable;
-				};
-			};
 		
 			uart7_pins_c: uart7-2 {
 				pins1 {
@@ -215,18 +185,6 @@
 				};
 				pins2 {
 					pinmux = <STM32_PINMUX('A', 8, AF13)>; /* UART7_RX */
-					bias-disable;
-				};
-			};
-			usart3_pins_a: usart3-0 {
-				pins1 {
-					pinmux = <STM32_PINMUX('B', 10, AF7)>; /* USART3_TX */
-					bias-disable;
-					drive-push-pull;
-					slew-rate = <0>;
-				};
-				pins2 {
-					pinmux = <STM32_PINMUX('B', 12, AF8)>; /* USART3_RX */
 					bias-disable;
 				};
 			};
@@ -266,10 +224,9 @@
 				status = "disabled";
 			};
 
-			i2c4_pins_a: i2c4-0 {
+			i2c4_pins_z_a: i2c4-0 {
 				pins {
-					pinmux = <STM32_PINMUX('Z', 4, AF6)>, /* I2C4_SCL */
-						 <STM32_PINMUX('B', 9, AF6)>; /* I2C4_SDA */
+					pinmux = <STM32_PINMUX('Z', 4, AF6)>; /* I2C4_SCL */
 					bias-disable;
 					drive-open-drain;
 					slew-rate = <0>;
