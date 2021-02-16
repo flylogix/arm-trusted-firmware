@@ -134,11 +134,11 @@
 };
 
 &rng1 {
-	status = "okay";
+	status = "disabled";
 };
 
 &rtc {
-	status = "okay";
+	status = "disabled";
 };
 
 &sdmmc1 {
@@ -263,15 +263,10 @@
 	};
 };
 
-&tamp{
-	status = "okay";
-	secure-status = "okay";
-};
-
 &bsec {
 	board_id: board_id@ec {
 		reg = <0xec 0x4>;
-		status = "okay";
+		status = "disabled";
 		secure-status = "okay";
 	};
 };
