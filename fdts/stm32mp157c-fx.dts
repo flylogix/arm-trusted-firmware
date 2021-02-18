@@ -121,10 +121,10 @@
 			};
 
 			vdda: ldo5 {
-				regulator-name = "vdda";
-				regulator-min-microvolt = <2900000>;
-				regulator-max-microvolt = <2900000>;
-				regulator-boot-on;
+				regulator-name = "vdd_sd";
+				regulator-min-microvolt = <3300000>;
+				regulator-max-microvolt = <3300000>;
+				regulator-always_on;
 			};
 
 			v1v2_hdmi: ldo6 {
