@@ -21,3 +21,7 @@
 &sdmmc1 {
 	compatible = "st,stm32-sdmmc2";
 };
+
+&sdmmc2 {
+	compatible = "st,stm32-sdmmc2";
+};

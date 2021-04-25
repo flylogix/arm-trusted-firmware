@@ -120,7 +120,7 @@
 				regulator-max-microvolt = <3300000>;
 			};
 
-			vdda: ldo5 {
+			vdd_sd: ldo5 {
 				regulator-name = "vdd_sd";
 				regulator-min-microvolt = <3300000>;
 				regulator-max-microvolt = <3300000>;
